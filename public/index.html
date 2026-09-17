@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercearia do J - Painel de Gestão</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">🏪</span>
+        <h1 class="brand-title">Mercearia do J</h1>
+      </div>
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Início</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Vendas</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Clientes</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content container">
+    
+    <!-- SEÇÃO: INDICADORES PRINCIPAIS -->
+    <section class="dashboard-overview" aria-label="Indicadores principais">
+      <h2 class="sr-only">Resumo do Dia</h2>
+      
+      <div class="kpi-grid">
+        <!-- Card 1: Estoque -->
+        <article class="card kpi-card">
+          <div class="kpi-header">
+            <h3 class="kpi-title">Produtos em estoque</h3>
+            <div class="kpi-icon icon-box" aria-hidden="true">
+              📦
+            </div>
+          </div>
+          <div class="kpi-body">
+            <p class="kpi-value">128 <span class="kpi-unit">produtos</span></p>
+          </div>
+        </article>
+
+        <!-- Card 2: Vendas -->
+        <article class="card kpi-card">
+          <div class="kpi-header">
+            <h3 class="kpi-title">Vendas hoje</h3>
+            <div class="kpi-icon icon-money" aria-hidden="true">
+              💰
+            </div>
+          </div>
+          <div class="kpi-body">
+            <p class="kpi-value">R$ 1.250,00</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Clientes -->
+        <article class="card kpi-card">
+          <div class="kpi-header">
+            <h3 class="kpi-title">Clientes</h3>
+            <div class="kpi-icon icon-users" aria-hidden="true">
+              👥
+            </div>
+          </div>
+          <div class="kpi-body">
+            <p class="kpi-value">86 <span class="kpi-unit">clientes</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: CONTAS A RECEBER -->
+    <section class="card section-receivables" aria-labelledby="receivables-title">
+      <div class="section-header">
+        <h2 id="receivables-title" class="section-title">Contas a Receber</h2>
+        <span class="badge badge-info">3 pendientes</span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Data limite</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="status-expired">
+              <td data-label="Nome" class="font-medium">João Silva</td>
+              <td data-label="Valor" class="font-semibold">R$ 120,00</td>
+              <td data-label="Data limite">10/09/2026</td>
+              <td data-label="Status">
+                <span class="badge badge-danger">Vencido</span>
+              </td>
+            </tr>
+            <tr class="status-warning">
+              <td data-label="Nome" class="font-medium">Maria Santos</td>
+              <td data-label="Valor" class="font-semibold">R$ 85,50</td>
+              <td data-label="Data limite">12/09/2026</td>
+              <td data-label="Status">
+                <span class="badge badge-warning">Próximo ao vencimento</span>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Nome" class="font-medium">Pedro Souza</td>
+              <td data-label="Valor" class="font-semibold">R$ 230,00</td>
+              <td data-label="Data limite">15/09/2026</td>
+              <td data-label="Status">
+                <span class="badge badge-neutral">No prazo</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer container">
+    <p>&copy; 2026 Mercearia do J - Sistema de Gestão Simplificado</p>
+  </footer>
+
+</body>
+</html>
