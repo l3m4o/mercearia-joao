@@ -60,6 +60,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text-main);
   line-height: 1.5;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -171,10 +172,35 @@ body {
   gap: var(--spacing-xl);
 }
 
+.dashboard-intro {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-label {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.section-description {
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-xs);
+}
+
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.kpi-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
 }
 
 .kpi-card:hover {
@@ -215,6 +241,17 @@ body {
   line-height: 1.2;
 }
 
+.kpi-content h2 {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-xs);
+}
+
+.kpi-description {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}
+
 .kpi-unit {
   font-size: var(--font-size-base);
   font-weight: 400;
@@ -242,6 +279,12 @@ body {
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--color-text-main);
+}
+
+.receivables-count {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
 }
 
 /* Tabela */
@@ -283,6 +326,35 @@ body {
 
 .data-table tbody tr:last-child td {
   border-bottom: none;
+}
+
+.customer-name {
+  font-weight: 600;
+}
+
+.due-date {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  white-space: nowrap;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.due-soon .status {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.due-normal .status {
+  background-color: var(--color-info-bg);
+  color: var(--color-info);
 }
 
 /* Badges / Destaques de Estado Visual */
@@ -347,8 +419,8 @@ body {
   }
 }
 
-/* Dispositivos Móveis (Telas até 600px) */
-@media (max-width: 600px) {
+/* Dispositivos Móveis (Telas até 550px) */
+@media (max-width: 550px) {
   .header-container {
     flex-direction: column;
     height: auto;
@@ -370,6 +442,12 @@ body {
   /* Empilhar Cards Verticalmente */
   .kpi-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--spacing-sm);
   }
 
   /* Adaptação de Tabela em Cards para Mobile */
